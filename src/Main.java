@@ -26,9 +26,7 @@ public class Main {
 
         Scanner peopleID = new Scanner(System.in);
         System.out.println("Enter ID people: ");
-        String idByUser = peopleID.next();
-        String keyID = idByUser.toLowerCase();
-        System.out.println(people.get(keyID));
+        System.out.println(people.get(peopleID.next().toLowerCase()));
     }
 
     public static void main(String[] args) {
@@ -36,7 +34,7 @@ public class Main {
         randomFloatList();
         findNameByID();
 
-
+        
 
 
 
