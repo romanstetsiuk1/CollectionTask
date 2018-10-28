@@ -1,7 +1,4 @@
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Random;
+import java.util.*;
 
 public class Main {
 
@@ -15,11 +12,30 @@ public class Main {
         }
         floatList
                 .forEach(value -> System.out.println("Result: " + Math.PI * value));
+
+        System.out.println("*******************************************************" + "\n");
+    }
+
+//    Task 2. Find user name by ID in HashMap, using method toLowerCase
+    public static void findNameByID() {
+        Map<String, String> people = new HashMap<>();
+        people.put("a1245b", "Jan Kowalski");
+        people.put("a1234a", "Marek Kowalski");
+        people.put("aaa45b", "Kasia Nowak");
+        people.put("a124bb", "Jan Nowak");
+
+        Scanner peopleID = new Scanner(System.in);
+        System.out.println("Enter ID people: ");
+        String idByUser = peopleID.next();
+        String keyID = idByUser.toLowerCase();
+        System.out.println(people.get(keyID));
     }
 
     public static void main(String[] args) {
 
         randomFloatList();
+        findNameByID();
+
 
 
 
