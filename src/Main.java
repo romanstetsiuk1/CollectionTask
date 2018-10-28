@@ -50,18 +50,27 @@ public class Main {
         }
     }
 
+//    Task 4. Convert String to set, return set size
+    public static void stringToSet() {
+        String word = "aa fff vvv nn c a";
+        char[] myWordchar = word.toCharArray();
+
+        Set<Character> set = new HashSet<>();
+
+        for (int i = 0; i < myWordchar.length; i++){
+            set.add(myWordchar[i]);
+        }
+        System.out.println("Your string has " + myWordchar.length + " charakters");
+        System.out.println(set.size() + " characters never repeat.");
+    }
+
+
     public static void main(String[] args) {
 
         randomFloatList();
         findNameByID();
         dictionary();
-
-
-
-
-
-
-
+        stringToSet();
 
 
     }
