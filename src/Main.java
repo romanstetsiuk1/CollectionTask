@@ -29,12 +29,36 @@ public class Main {
         System.out.println(people.get(peopleID.next().toLowerCase()));
     }
 
+//    Task 3. Dictionary pl/en based on HashMap
+    public static void dictionary() {
+        Map<String, String> dictionary = new HashMap<>();
+        dictionary.put("kot", "cat");
+        dictionary.put("pies", "dog");
+        dictionary.put("ma", "have");
+        dictionary.put("ludzi", "people");
+
+        Scanner user_text = new Scanner(System.in);
+        String userText = user_text.nextLine();
+
+        String[] wordArray = userText.split(" ");
+        for (String item : wordArray) {
+            if (dictionary.containsKey(item)) {
+                System.out.println(dictionary.get(item));
+            } else {
+                System.out.println(item);
+            }
+        }
+    }
+
     public static void main(String[] args) {
 
         randomFloatList();
         findNameByID();
+        dictionary();
 
-        
+
+
+
 
 
 
